@@ -1,0 +1,106 @@
+:root {
+  --card-width: 230px;
+  --card-height: 230px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-family: "Shadows Into Light", cursive;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(165, 165, 248);
+  overflow-x: hidden;
+}
+
+.colCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  width: var(--card-width);
+  height: var(--card-height);
+  outline: 10px solid black;
+  border-radius: 50%;
+  box-shadow: 10px 10px 0px 10px black;
+  background: rgb(249, 232, 153);
+  padding-top: 4rem;
+  cursor: grab;
+}
+
+.card h2 {
+  color: transparent;
+}
+
+.cardImg {
+  display: none;
+}
+
+.cardRect {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: calc(1.1 * var(--card-width));
+  height: calc(1.2 * var(--card-height));
+  outline: 10px solid black;
+  box-shadow: 7px 7px 0px 10px black;
+  border-radius: 7px;
+  background: white;
+  padding-top: 5rem;
+}
+
+.cardRect:active {
+  cursor: grab;
+}
+
+.cardRect:not(:active) {
+  cursor: grabbing;
+}
+
+.cardIcon {
+  top: 0;
+  left: 0;
+}
+
+h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: var(--card-width);
+  font-size: 3rem;
+}
+
+.cardRect button {
+  margin: 0.5rem 0 2rem;
+  width: calc(0.8 * var(--card-width));
+  height: calc(0.35 * var(--card-height));
+  border: 7px solid black;
+  border-radius: 7px;
+  background: rgb(178, 19, 178);
+  box-shadow: 10px 10px 0px black;
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+/* 
+@media(width<=1900){
+  .cardRect{
+     font-size: 0.5rem;
+  }
+} */
